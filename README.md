@@ -37,6 +37,7 @@ descriptor:x25519:N2NU7BSRL6YODZCYPN4CREB54TYLKGIE2KYOQWLFYC23ZJVCE5DQ
 ```
 
 **Client side**
+
 Make sure you have `ClientOnionAuthDir` set in your `torrc`. For example, add this line to `/etc/tor/torrc`: `ClientOnionAuthDir /var/lib/tor/onion_auth`
 
 Then, in the `<ClientOnionAuthDir>` directory, create an `.auth_private` file for the Onion Service corresponding to this key (i.e. 'bob_onion.auth_private'). The content of the `<ClientOnionAuthDir>/<user>.auth_private` file should look like this:
