@@ -49,7 +49,7 @@ For example: `rh5d6reakhpvuxe2t3next6um6iiq4jf43m7gmdrphfhopfpnoglzcyd:descripto
 
 ---
 
-## Releases
+## [Releases](https://github.com/sator-sdk/OnionV3KeysGeneration/releases)
 
 ---
 
