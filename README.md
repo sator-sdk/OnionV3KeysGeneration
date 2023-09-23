@@ -16,7 +16,8 @@ So I decided to make a more competitive Rsut script just because Rust language d
 ```shell
 x25519-keygen <name> <onion-addres>
 # Example
-./keygenx25519 bob rh5d6reakhpvuxe2t3next6um6iiq4jf43m7gmdrphfhopfpnoglzcyd      
+./keygenx25519 bob rh5d6reakhpvuxe2t3next6um6iiq4jf43m7gmdrphfhopfpnoglzcyd
+# Output  
 bob public key:  WU7FGD3CZWVFUBBVHRJLSRZC6ZMIWJITJX5LEYHI5UOUZBYTOIXA
 bob private key: BN4M2IT6DQWFLF26EF6L3OIHWXXRGHECGXOQ7E7UPO5CL5Z7IJDA
 Public key saved to bob.auth
@@ -45,7 +46,11 @@ Then, in the `<ClientOnionAuthDir>` directory, create an `.auth_private` file fo
 ```shell
  <56-char-onion-addr-without-.onion-part>:descriptor:x25519:<x25519 private key in base32>
 ```
-For example: `rh5d6reakhpvuxe2t3next6um6iiq4jf43m7gmdrphfhopfpnoglzcyd:descriptor:x25519:ZDUVQQ7IKBXSGR2WWOBNM3VP5ELNOYSSINDK7CAUN2W`
+For example:
+
+```shell
+rh5d6reakhpvuxe2t3next6um6iiq4jf43m7gmdrphfhopfpnoglzcyd:descriptor:x25519:ZDUVQQ7IKBXSGR2WWOBNM3VP5ELNOYSSINDK7CAUN2W
+```
 
 ---
 
