@@ -69,14 +69,20 @@ rustup update
 git clone https://github.com/sator-sdk/OnionV3KeysGeneration.git
 #
 cd OnionV3KeysGeneration
-#
+# Build binary
 cargo build --release
+
+# Install - Alternative to Makefile
+cargo install --path /usr/local/bin
 ```
 
+### Makefile
 
+Build binary directly in `/usr/local/bin` with Makefile:
 
-
-
+```shell
+sudo make install TARGET=release
+```
 
 
 
