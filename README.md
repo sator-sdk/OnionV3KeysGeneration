@@ -1,12 +1,13 @@
 # OnionV3KeysGeneration
 Rust script that generate the pair of keys (public and private), required by Tor as authentication credential in order to connect to the Onion Service, for v3 Onion Services only.
+
 ## Client Auth
 As already explained in the official tor [page](https://community.torproject.org/onion-services/advanced/client-auth/) the mechanism of authentication for Onion V3 Services is a method to make an Onion Service private and authenticated. It requires Tor clients to provide an authentication credential in order to connect to the Onion Service. For v3 Onion Services, this method works with a pair of keys (a public and a private). The service side is configured with a public key and the client can only access it with a private key.
 Read their guide on how to set properly up the configuration and all the location for the configuration files.
 
 ## x25519-keygen
-I developed this scirpt in Rust for its efficiency. Even though as they already pointed out its preatty easy to manually generate those pair of keys in multiple ways and also notable scripts already exists.
-The most notables are one in [Pyhton](https://github.com/pastly/python-snippits/blob/master/src/tor/x25519-gen.py) and one in [Bash](https://gist.github.com/mtigas/9c2386adf65345be34045dace134140b#file-onion-svc-v3-client-auth-sh), but another in [Rust](https://github.com/ppopth/torkeygen/tree/master) also exist but i've had some issues with that even if its a good script an simple.
+Even though as they already pointed out its pretty easy to manually generate those pair of keys in multiple ways and also other popular scripts already exists.
+The most notables are one in [Pyhton](https://github.com/pastly/python-snippits/blob/master/src/tor/x25519-gen.py) and one in [Bash](https://gist.github.com/mtigas/9c2386adf65345be34045dace134140b#file-onion-svc-v3-client-auth-sh), another in [Rust](https://github.com/ppopth/torkeygen/tree/master) also exist but i've had some issues with that even if its a good script an simple.
 So I decided to make a more competitive Rsut script just because Rust language deserve it!
 
 ---
