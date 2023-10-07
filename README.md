@@ -1,5 +1,5 @@
 # OnionV3KeysGeneration
-Rust script that generate the pair of keys (public and private), required by Tor as authentication credential in order to connect to the Onion Service, for v3 Onion Services only.
+Rust script that generate the key pair (public and private) required by Tor as authentication credential in order to connect to the Onion Service, for v3 Onion Hidden Services only.
 
 ## Client Auth
 As already explained in the official tor [page](https://community.torproject.org/onion-services/advanced/client-auth/) the mechanism of authentication for Onion V3 Services is a method to make an Onion Service private and authenticated. It requires Tor clients to provide an authentication credential in order to connect to the Onion Service. For v3 Onion Services, this method works with a pair of keys (a public and a private). The service side is configured with a public key and the client can only access it with a private key.
@@ -42,7 +42,7 @@ descriptor:x25519:N2NU7BSRL6YODZCYPN4CREB54TYLKGIE2KYOQWLFYC23ZJVCE5DQ
 
 Make sure you have `ClientOnionAuthDir` set in your `torrc`. For example, add this line to `/etc/tor/torrc`: `ClientOnionAuthDir /var/lib/tor/onion_auth`
 
-Then, in the `<ClientOnionAuthDir>` directory, create an `.auth_private` file for the Onion Service corresponding to this key (i.e. 'bob_onion.auth_private'). The content of the `<ClientOnionAuthDir>/<user>.auth_private` file should look like this:
+Then, in the `ClientOnionAuthDir` directory, create an `.auth_private` file for the Onion Service corresponding to this key (i.e. 'bob_onion.auth_private'). The content of the `ClientOnionAuthDir/<user>.auth_private` file should look like this:
 
 ```shell
  <56-char-onion-addr-without-.onion-part>:descriptor:x25519:<x25519 private key in base32>
